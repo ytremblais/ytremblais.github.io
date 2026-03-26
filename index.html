@@ -1228,6 +1228,7 @@
     nav { padding: 0.9rem 1.25rem; box-sizing: border-box; width: 100%; }
     .nav-cta { display: none; }
     .nav-links { display: none; }
+    .nav-logo { flex: 1; text-align: center; }
 
     .hero { grid-template-columns: 1fr; min-height: auto; }
     .hero-left { padding: 6rem 1.25rem 2rem; }
@@ -1267,6 +1268,9 @@
 
 <!-- NAV -->
 <nav>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
   <span class="nav-logo">Yannick Tremblais</span>
   <ul class="nav-links">
     <li><a href="#bio">Biographie</a></li>
@@ -1276,9 +1280,6 @@
     <li><a href="#contact">Contact</a></li>
   </ul>
   <a href="https://www.linkedin.com/in/ytremblais/" target="_blank" rel="noopener noreferrer" class="nav-cta">Me contacter</a>
-  <button class="nav-hamburger" id="hamburger" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
 </nav>
 <div class="nav-mobile-menu" id="mobileMenu">
   <a href="#bio">Biographie</a>
