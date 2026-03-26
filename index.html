@@ -547,6 +547,15 @@
     flex-grow: 1;
   }
 
+  .expertise-desc a {
+    color: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-color: rgba(196,149,106,0.4);
+  }
+
   /* ─── FORMATS ─── */
   .formats-section {
     border-top: 1px solid rgba(245,240,232,0.08);
@@ -788,17 +797,33 @@
     line-height: 1.3;
   }
 
-  a.ref-event, .ref-event a {
+  a.ref-event {
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.15rem;
     font-weight: 400;
     color: var(--paper);
+    display: block;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-color: rgba(196,149,106,0.5);
+    margin-bottom: 0.25rem;
+    line-height: 1.3;
+  }
+
+  a.ref-event:hover {
+    text-decoration-color: var(--clay);
+  }
+
+  .ref-event a {
+    color: inherit;
+    font-size: inherit;
+    font-family: inherit;
     text-decoration: underline;
     text-underline-offset: 3px;
     text-decoration-color: rgba(196,149,106,0.5);
   }
 
-  a.ref-event:hover, .ref-event a:hover {
+  .ref-event a:hover {
     text-decoration-color: var(--clay);
   }
 
@@ -1377,7 +1402,7 @@
       <div class="expertise-card">
         <span class="expertise-icon">🤝</span>
         <div class="expertise-name">Communauté & Co-organisation</div>
-        <div class="expertise-desc">Membre de Generative AI France, co-organisateur du GenAI Day Rennes et de <a href="https://www.hack-my-sport.fr/" target="_blank" rel="noopener noreferrer" class="ref-event"> Hack My Sport</a>. Un ancrage fort dans l'écosystème tech breton et les communautés IA nationales.</div>
+        <div class="expertise-desc">Membre de Generative AI France, co-organisateur du GenAI Day Rennes et de <a href="https://www.hack-my-sport.fr/" target="_blank" rel="noopener noreferrer">Hack My Sport</a>. Un ancrage fort dans l'écosystème tech breton et les communautés IA nationales.</div>
       </div>
     </div>
   </section>
