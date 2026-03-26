@@ -3,6 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https:; script-src 'self' 'unsafe-inline'; connect-src 'none';">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
 <title>Yannick Tremblais — Conférencier IA & Innovation</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1121,6 +1124,28 @@
     transform: translateY(0);
   }
 
+  .greenscore-link {
+    color: rgba(122,158,126,0.7);
+  }
+  .greenscore-link:hover {
+    color: var(--sage);
+  }
+  .greenscore-github {
+    flex-shrink: 0;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.58rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(122,158,126,0.6);
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 0.3s;
+  }
+  .greenscore-github:hover {
+    color: var(--sage);
+    text-decoration: none;
+  }
+
   /* ─── RESPONSIVE TABLETTE ─── */
   @media (max-width: 900px) {
     .hero { grid-template-columns: 1fr; }
@@ -1193,7 +1218,7 @@
     <li><a href="#references">Références</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <a href="https://www.linkedin.com/in/ytremblais/" target="_blank" class="nav-cta">Me contacter</a>
+  <a href="https://www.linkedin.com/in/ytremblais/" target="_blank" rel="noopener noreferrer" class="nav-cta">Me contacter</a>
 </nav>
 
 <!-- HERO -->
@@ -1202,7 +1227,7 @@
     <div class="hero-left">
       <p class="hero-tag">Conférencier · IA Générative · Innovation · Numérique Responsable</p>
       <h1 class="hero-name">Yannick<br><em>Tremblais</em></h1>
-      <p class="hero-subtitle">Rendre l'intelligence artificielle concrète, accessible et responsable — pour les organisations qui veulent comprendre, pas seulement subir.</p>
+      <p class="hero-subtitle">Rendre l'intelligence artificielle concrète, accessible et responsable, pour les organisations qui veulent comprendre, pas seulement subir.</p>
       <div class="hero-stats">
         <div>
           <div class="stat-num">32</div>
@@ -1461,7 +1486,7 @@
         <span class="ref-year">2026</span>
         <div class="ref-content">
           <span class="ref-type">Co-organisation · Sport & IA Générative · Juin 2026</span>
-          <div class="ref-event"><a href="https://www.hack-my-sport.fr/" target="_blank">Hack My Sport</a> — 1er Hackathon Sport × IA Générative</div>
+          <div class="ref-event"><a href="https://www.hack-my-sport.fr/" target="_blank" rel="noopener noreferrer">Hack My Sport</a> — 1er Hackathon Sport × IA Générative</div>
           <div class="ref-detail">Co-organisation du premier hackathon dédié à l'intersection du sport et de l'IA Générative </div>
           <div class="ref-detail">Imaginer les solutions de demain pour le monde sportif avec les outils IA</div>
         </div>
@@ -1472,7 +1497,7 @@
         <div class="ref-content">
           <span class="ref-type">Formation - Latitudes</span>
           <a href="https://www.linkedin.com/posts/ytremblais_cette-semaine-jai-chang%C3%A9-plusieurs-fois-activity-7441732635468464128-G5pZ" target="_blank" rel="noopener noreferrer" class="ref-event">Future of IA : Intervention auprès des collégiens</a>
-          <div class="ref-detail">Animation d'ateliers de sensibilisation à l'impact de l'intelligence artificielle et du numérique avec l'association <a href="https://www.latitudes.cc/" target="_blank">Latitudes</a>
+          <div class="ref-detail">Animation d'ateliers de sensibilisation à l'impact de l'intelligence artificielle et du numérique avec l'association <a href="https://www.latitudes.cc/" target="_blank" rel="noopener noreferrer">Latitudes</a>
           </div>
         </div>
       </div>
@@ -1528,7 +1553,7 @@
         <span class="ref-year">2025</span>
         <div class="ref-content">
           <span class="ref-type">Conférence internationale · IA Générative · 9–11 décembre 2025</span>
-          <div class="ref-event"><a href="https://www.generationaiconf.com/events/paris" target="_blank">GenerationAI Paris 2025</a> — apidays · CNIT La Défense</div>
+          <div class="ref-event"><a href="https://www.generationaiconf.com/events/paris" target="_blank" rel="noopener noreferrer">GenerationAI Paris 2025</a> — apidays · CNIT La Défense</div>
           <div class="ref-detail">Intervention à l'un des plus grands événements européens dédiés à l'IA Générative </div>
           <div class="ref-detail">4 000+ participants, 150+ speakers, aux côtés d'experts de Microsoft, Google, Mistral, NVIDIA. </div>
           <div class="ref-detail">Organisé dans le cadre d'apidays Paris 2025.</div>
@@ -1548,7 +1573,7 @@
         <span class="ref-year">2025</span>
         <div class="ref-content">
           <span class="ref-type">Co-organisation · IA Générative · 18 septembre 2025</span>
-          <div class="ref-event"><a href="https://genai-rennes.lovable.app/" target="_blank">GenAI Day Rennes #3 — Generative AI France</a></div>
+          <div class="ref-event"><a href="https://genai-rennes.lovable.app/" target="_blank" rel="noopener noreferrer">GenAI Day Rennes #3 — Generative AI France</a></div>
           <div class="ref-detail">Co-organisation de la journée 100% IA Générative au Carrousel de la Courrouze, Rennes — avec des speakers de Doctolib, Malt, Groupama et d'autres experts des usages concrets de l'IA</div>
         </div>
       </div>
@@ -1728,9 +1753,9 @@
       </div>
       <div style="width: 1px; height: 32px; background: rgba(245,240,232,0.07); flex-shrink: 0;"></div>
       <p style="font-size: 0.82rem; line-height: 1.6; color: rgba(245,240,232,0.38); flex: 1; margin: 0;">
-        Co-créateur d'une grille open source d'évaluation de l'impact environnemental des API, une initiative communautaire avec le <a href="https://www.collectif-api-thinking.com/" target="_blank" style="color: rgba(122,158,126,0.6); text-decoration: underline;">Collectif API Thinking</a>, qui illustre la cohérence entre expertise technique et engagement pour un numérique responsable.
+        Co-créateur d'une grille open source d'évaluation de l'impact environnemental des API, une initiative communautaire avec le <a href="https://www.collectif-api-thinking.com/" target="_blank" rel="noopener noreferrer" class="greenscore-link">Collectif API Thinking</a>, qui illustre la cohérence entre expertise technique et engagement pour un numérique responsable.
       </p>
-      <a href="https://github.com/API-Green-Score/" target="_blank" style="flex-shrink: 0; font-family: 'DM Mono', monospace; font-size: 0.58rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(122,158,126,0.6); text-decoration: none; white-space: nowrap; transition: color 0.3s;" onmouseover="this.style.color='rgba(122,158,126,1)'" onmouseout="this.style.color='rgba(122,158,126,0.6)'">GitHub →</a>
+      <a href="https://github.com/API-Green-Score/" target="_blank" rel="noopener noreferrer" class="greenscore-github">GitHub →</a>
     </div>
   </div>
 </div>
@@ -1751,7 +1776,7 @@
     <p class="contact-sub">Séminaire d'entreprise, conférence sectorielle, formation interne, keynote — je suis disponible pour discuter de votre projet.</p>
     <div class="contact-buttons">
       <a href="https://www.linkedin.com/in/ytremblais" target="_blank" rel="noopener noreferrer" class="btn-primary">Envoyer un message</a>
-      <a href="https://www.linkedin.com/in/ytremblais/" target="_blank" class="btn-secondary">LinkedIn</a>
+      <a href="https://www.linkedin.com/in/ytremblais/" target="_blank" rel="noopener noreferrer" class="btn-secondary">LinkedIn</a>
     </div>
   </div>
 </div>
@@ -1762,7 +1787,7 @@
   <p></p>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
   // Custom cursor
   const cursor = document.getElementById('cursor');
   const ring = document.getElementById('cursorRing');
