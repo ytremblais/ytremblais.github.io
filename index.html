@@ -31,6 +31,18 @@
     cursor: none;
   }
 
+  a {
+    color: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-color: rgba(196,149,106,0.45);
+  }
+
+  a:hover { text-decoration-color: var(--clay); }
+
   /* Custom cursor */
   .cursor {
     position: fixed;
@@ -116,7 +128,7 @@
     text-decoration: none;
     transition: background 0.3s;
   }
-  .nav-cta:hover { background: var(--gold); }
+  .nav-cta:hover { background: var(--gold); text-decoration: none; }
 
   /* ─── HERO ─── */
   .hero {
@@ -547,14 +559,6 @@
     flex-grow: 1;
   }
 
-  .expertise-desc a {
-    color: inherit;
-    font-size: inherit;
-    font-family: inherit;
-    text-decoration: underline;
-    text-underline-offset: 3px;
-    text-decoration-color: rgba(196,149,106,0.4);
-  }
 
   /* ─── FORMATS ─── */
   .formats-section {
@@ -798,52 +802,19 @@
   }
 
   a.ref-event {
+    display: block;
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.15rem;
     font-weight: 400;
     color: var(--paper);
-    display: block;
-    text-decoration: underline;
-    text-underline-offset: 3px;
-    text-decoration-color: rgba(196,149,106,0.5);
     margin-bottom: 0.25rem;
     line-height: 1.3;
-  }
-
-  a.ref-event:hover {
-    text-decoration-color: var(--clay);
-  }
-
-  .ref-event a {
-    color: inherit;
-    font-size: inherit;
-    font-family: inherit;
-    text-decoration: underline;
-    text-underline-offset: 3px;
-    text-decoration-color: rgba(196,149,106,0.5);
-  }
-
-  .ref-event a:hover {
-    text-decoration-color: var(--clay);
   }
 
   .ref-detail {
     font-size: 0.8rem;
     color: rgba(245,240,232,0.4);
     line-height: 1.5;
-  }
-
-  .ref-detail a {
-    color: inherit;
-    font-size: inherit;
-    font-family: inherit;
-    text-decoration: underline;
-    text-underline-offset: 3px;
-    text-decoration-color: rgba(196,149,106,0.4);
-  }
-
-  .ref-detail a:hover {
-    text-decoration-color: var(--clay);
   }
 
   .ref-type {
@@ -1136,10 +1107,10 @@
     transform: translateY(0);
   }
 
-  /* ─── RESPONSIVE ─── */
+  /* ─── RESPONSIVE TABLETTE ─── */
   @media (max-width: 900px) {
     .hero { grid-template-columns: 1fr; }
-    .hero-right { height: 50vh; }
+    .hero-right { height: 40vh; }
     .bio-section { grid-template-columns: 1fr; gap: 3rem; }
     .talks-header { grid-template-columns: 1fr; }
     .expertise-grid { grid-template-columns: 1fr 1fr; }
@@ -1150,6 +1121,46 @@
     .hero-left { padding: 8rem 1.5rem 3rem; }
     .contact-section { padding: 5rem 1.5rem; }
     footer { padding: 1.5rem; flex-direction: column; gap: 0.8rem; text-align: center; }
+    .refs-intro { grid-template-columns: 1fr; }
+    .certifs-row { grid-template-columns: 1fr 1fr; }
+    .ateliers-intro-grid { grid-template-columns: 1fr; }
+    .ateliers-grid { grid-template-columns: 1fr; }
+    .atelier-card.featured { grid-column: span 1; grid-template-columns: 1fr; gap: 1.5rem; }
+  }
+
+  /* ─── RESPONSIVE MOBILE ─── */
+  @media (max-width: 600px) {
+    nav { padding: 1rem; }
+    .nav-cta { display: none; }
+
+    .hero { grid-template-columns: 1fr; min-height: auto; }
+    .hero-left { padding: 6rem 1.25rem 2.5rem; }
+    .hero-right { display: none; }
+    .hero-stats { gap: 1.5rem; flex-wrap: wrap; }
+
+    section { padding: 3.5rem 1.25rem; }
+
+    .bio-section { grid-template-columns: 1fr; gap: 2rem; padding-top: 3.5rem; }
+
+    .talks-header { grid-template-columns: 1fr; gap: 1rem; margin-bottom: 2rem; }
+    .talk-item { grid-template-columns: 2rem 1fr; gap: 1rem; padding: 1.5rem 0; }
+    .talk-meta { display: none; }
+
+    .expertise-grid { grid-template-columns: 1fr; }
+    .expertise-card { padding: 1.75rem; min-height: auto; }
+
+    .formats-grid { grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+    .ref-item { grid-template-columns: 3.5rem 1fr; gap: 1rem; }
+
+    .certifs-row { grid-template-columns: 1fr; }
+
+    .contact-section { padding: 3.5rem 1.25rem; }
+    .contact-buttons { flex-direction: column; align-items: stretch; }
+
+    footer { padding: 1.25rem; flex-direction: column; gap: 0.6rem; text-align: center; font-size: 0.7rem; }
+
+    .cursor, .cursor-ring { display: none; }
   }
 </style>
 </head>
