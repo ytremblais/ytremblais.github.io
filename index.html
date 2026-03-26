@@ -36,12 +36,27 @@
     font-size: inherit;
     font-family: inherit;
     font-weight: inherit;
+    text-decoration: none;
+  }
+
+  /* Soulignement seulement pour les vrais liens URL */
+  p a[href],
+  .bio-right a[href],
+  .ref-detail a[href],
+  .expertise-desc a[href],
+  a[href][target="_blank"] {
     text-decoration: underline;
     text-underline-offset: 3px;
     text-decoration-color: rgba(196,149,106,0.45);
   }
 
-  a:hover { text-decoration-color: var(--clay); }
+  p a[href]:hover,
+  .bio-right a[href]:hover,
+  .ref-detail a[href]:hover,
+  .expertise-desc a[href]:hover,
+  a[href][target="_blank"]:hover {
+    text-decoration-color: var(--clay);
+  }
 
   /* Custom cursor */
   .cursor {
@@ -507,6 +522,7 @@
   .expertise-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-auto-flow: row;
     gap: 1px;
     background: rgba(245,240,232,0.07);
     align-items: stretch;
@@ -789,8 +805,6 @@
     opacity: 0.7;
     padding-top: 0.25rem;
   }
-
-  .ref-content {}
 
   .ref-event {
     font-family: 'Cormorant Garamond', serif;
@@ -1252,12 +1266,12 @@
         </div>
       </div>
       <div class="bio-right">
-        <p>Je suis <strong>responsable de l'Innovation Technologique</strong> au sein du <a href="https://groupe-rocher.com" target="_blank" rel="noopener noreferrer" class="ref-event">Groupe Rocher, où j'accompagne les équipes métiers et technologiques dans l'exploration et l'adoption des nouvelles technologies, notamment autour de l'intelligence artificielle (IA).</p>
-        <p>Passionné d'informatique <strong>depuis 40 ans</strong>, je cumule plus de 32 ans d'expérience dans l'écosystème IT, avec une expertise profonde en <strong>intégration de systèmes d'information et architectures API</strong>. Une conviction l'anime depuis toujours : <em style="color: var(--clay); font-style: italic;">la technologie doit être au service des personnes, des métiers et de l'impact positif.</em></p>
+        <p>Je suis <strong>responsable de l'Innovation Technologique</strong> au sein du Groupe Rocher, où j'accompagne les équipes métiers et technologiques dans l'exploration et l'adoption des nouvelles technologies, notamment autour de l'intelligence artificielle (IA).</p>
+        <p>Passionné d'informatique <strong>depuis 40 ans</strong>, je cumule plus de 32 ans d'expérience dans l'écosystème IT, avec une expertise profonde en <strong>intégration de systèmes d'information et architectures API</strong>. Une conviction m'anime depuis toujours : <em style="color: var(--clay); font-style: italic;">la technologie doit être au service des personnes, des métiers et de l'impact positif.</em></p>
         <p>Co-créateur de l'<strong>API Green Score</strong> avec le Collectif API Thinking, j'ai contribué à élaborer une grille de référence permettant d'<strong>évaluer l'impact environnemental des API</strong>, une démarche pionnière à l'intersection de l'architecture technique et du numérique responsable.</p>
         <p><strong>Facilitateur formé</strong>, j'anime des <strong>ateliers d'idéation et d'accélération sur l'IA</strong>, des sessions participatives pensées pour faire émerger des idées, aligner les équipes et accélérer le passage à l'action autour des cas d'usage IA.</p>
         <p>Engagé dans une approche responsable du numérique, je participe à des initiatives autour de l'<strong>écoconception et du numérique durable</strong>, en lien avec les valeurs du Groupe Rocher : reconnecter les femmes et les hommes à la nature.</p>
-        <p>Membre de l'association <strong>Generative AI France</strong>, je co-organise des événements communautaires dédiés aux usages concrets de l'IA — dont le <strong>GenAI Day Rennes</strong> et le hackathon <strong>Hack My Sport</strong>. Curieux et convaincu de la puissance du collectif, je m'enrichis continuellement des échanges avec l'écosystème startups, chercheurs, développeurs et communautés technologiques.</p>
+        <p>Membre de l'association <strong>Generative AI France</strong>, je co-organise des événements communautaires dédiés aux usages concrets de l'IA, dont le <strong>GenAI Day Rennes</strong> et le hackathon <strong>Hack My Sport</strong>. Curieux et convaincu de la puissance du collectif, je m'enrichis continuellement des échanges avec l'écosystème startups, chercheurs, développeurs et communautés technologiques.</p>
       </div>
     </div>
   </section>
@@ -1438,7 +1452,7 @@
         <div class="section-label">Interventions & engagements</div>
         <h2>Une présence régulière<br>dans les <em style="color:var(--clay); font-style:italic;">communautés</em></h2>
       </div>
-      <p class="talks-intro">Conférences, tables rondes, co-organisation d'événements, meetups — autant de lieux où Yannick partage ses convictions et construit, avec les communautés tech bretonnes et nationales, un numérique plus utile et plus responsable.</p>
+      <p class="talks-intro">Conférences, tables rondes, co-organisation d'événements, meetups, autant de lieux où je partage mes convictions et construit, avec les communautés tech bretonnes et nationales, un numérique plus utile et plus responsable.</p>
     </div>
 
     <div class="refs-timeline">
@@ -1496,17 +1510,8 @@
         <span class="ref-year">2026</span>
         <div class="ref-content">
           <span class="ref-type">Conférence · Epitech Summit · 3–4 février 2026</span>
-          <div class="ref-event">Epitech Summit Rennes — IA & évolution du métier de développeur</div>
+          <div class="ref-event"><a href="https://summit.epitech.eu/e/rennes/speakers" target="_blank" rel="noopener noreferrer">Epitech Summit Rennes — IA & évolution du métier de développeur</a></div>
           <div class="ref-detail">Retour d'expérience sur l'IA et réflexion sur l'évolution du métier de développeur à l'ère des outils génératifs</div>
-        </div>
-      </div>
-
-      <div class="ref-item">
-        <span class="ref-year">2026</span>
-        <div class="ref-content">
-          <span class="ref-type">Meetup · IA Générative · 22 janvier 2026</span>
-          <a href="https://fr.linkedin.com/posts/ytremblais_generative-ai-rennes-10-thu-jan-22-2026-activity-7416926097193455618-rdvP" target="_blank" rel="noopener noreferrer" class="ref-event">Generative AI Rennes — Groupe SII</a>
-          <div class="ref-detail">Intervention dans un événement Generative AI Rennes pour démocratiser l'IA générative</div>
         </div>
       </div>
 
@@ -1531,7 +1536,7 @@
       </div>
 
       <div class="ref-item">
-        <span class="ref-year">2025</span>
+        <span class="ref-year">2026</span>
         <div class="ref-content">
           <span class="ref-type">Conférence · 1er Meetup No-Code France Rennes · EPSI</span>
           <div class="ref-event">Vibe Coding — No-Code France Rennes</div>
@@ -1589,12 +1594,11 @@
       <div class="ref-item">
         <span class="ref-year">2024</span>
         <div class="ref-content">
-          <span class="ref-type">Salon · Innovation</span>
-          <div class="ref-event">VivaTech — Pavillon Région Pays de la Loire</div>
-          <div class="ref-detail">Présence et interventions sur le stand régional, IA et innovation</div>
+          <span class="ref-type">Conférence · Transformation numérique</span>
+          <a href="https://fr.linkedin.com/posts/sii_transformerday-activity-7273308525395693568-SE1g" target="_blank" rel="noopener noreferrer" class="ref-event">SII Transformer Day — Transformation numérique & impact des technologies</a>
+          <div class="ref-detail">Participation à un événement sur la transformation numérique et l'impact des technologies</div>
         </div>
       </div>
-
       <div class="ref-item">
         <span class="ref-year">2024</span>
         <div class="ref-content">
@@ -1610,6 +1614,16 @@
           <span class="ref-type">Conférence internationale · API</span>
           <div class="ref-event">Apidays Paris — Track Digital Sustainability</div>
           <div class="ref-detail">Talk "Sustainable API Green Score" — Greenio Tech Conference, CNIT Paris</div>
+        </div>
+      </div>
+
+      
+      <div class="ref-item">
+        <span class="ref-year">2023</span>
+        <div class="ref-content">
+          <span class="ref-type">Conférence · Interface - Anglais</span>
+          <a href="https://www.youtube.com/watch?v=xKk6j3TrlJY" target="_blank" rel="noopener noreferrer" class="ref-event">Interface - API DAYS - API Green Score</a>
+          <div class="ref-detail">Participation à un événement anglophone pour présenter l'API Green Score</div>
         </div>
       </div>
 
@@ -1704,7 +1718,7 @@
       </div>
       <div style="width: 1px; height: 32px; background: rgba(245,240,232,0.07); flex-shrink: 0;"></div>
       <p style="font-size: 0.82rem; line-height: 1.6; color: rgba(245,240,232,0.38); flex: 1; margin: 0;">
-        Co-créateur d'une grille open source d'évaluation de l'impact environnemental des API — une initiative communautaire qui illustre la cohérence entre expertise technique et engagement pour un numérique responsable.
+        Co-créateur d'une grille open source d'évaluation de l'impact environnemental des API, une initiative communautaire avec le <a href="https://www.collectif-api-thinking.com/" target="_blank" style="color: rgba(122,158,126,0.6); text-decoration: underline;">Collectif API Thinking</a>, qui illustre la cohérence entre expertise technique et engagement pour un numérique responsable.
       </p>
       <a href="https://github.com/API-Green-Score/" target="_blank" style="flex-shrink: 0; font-family: 'DM Mono', monospace; font-size: 0.58rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(122,158,126,0.6); text-decoration: none; white-space: nowrap; transition: color 0.3s;" onmouseover="this.style.color='rgba(122,158,126,1)'" onmouseout="this.style.color='rgba(122,158,126,0.6)'">GitHub →</a>
     </div>
