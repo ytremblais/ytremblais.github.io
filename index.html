@@ -1168,7 +1168,7 @@
   /* ─── RESPONSIVE MOBILE ─── */
   /* ─── HAMBURGER ─── */
   .nav-hamburger {
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 6px;
@@ -1180,6 +1180,9 @@
     touch-action: manipulation;
     -webkit-tap-highlight-color: transparent;
     flex-shrink: 0;
+  }
+  @media (min-width: 769px) {
+    .nav-hamburger { display: none; }
   }
   .nav-hamburger span {
     display: block;
@@ -1225,7 +1228,6 @@
     nav { padding: 0.9rem 1.25rem; box-sizing: border-box; width: 100%; }
     .nav-cta { display: none; }
     .nav-links { display: none; }
-    .nav-hamburger { display: flex; margin-left: auto; }
 
     .hero { grid-template-columns: 1fr; min-height: auto; }
     .hero-left { padding: 6rem 1.25rem 2rem; }
