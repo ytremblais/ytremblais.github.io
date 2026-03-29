@@ -1259,6 +1259,49 @@
 
     .cursor, .cursor-ring { display: none; }
   }
+
+  /* ─── GREENSCORE BANNER ─── */
+  .greenscore-banner-wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 4rem 4rem;
+  }
+  .greenscore-banner-inner {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    padding: 1.5rem 2rem;
+    border: 1px solid rgba(122,158,126,0.12);
+    background: rgba(61,90,62,0.04);
+  }
+  .greenscore-banner-label {
+    flex-shrink: 0;
+    font-family: 'DM Mono', monospace;
+  }
+  .greenscore-banner-sep {
+    width: 1px;
+    height: 32px;
+    background: rgba(245,240,232,0.07);
+    flex-shrink: 0;
+  }
+  .greenscore-banner-text {
+    font-size: 0.82rem;
+    line-height: 1.6;
+    color: rgba(245,240,232,0.38);
+    flex: 1;
+    margin: 0;
+  }
+
+  @media (max-width: 900px) {
+    .greenscore-banner-wrap { padding: 0 1.5rem 3rem; }
+  }
+
+  @media (max-width: 768px) {
+    .greenscore-banner-wrap { padding: 0 1.25rem 2.5rem; }
+    .greenscore-banner-inner { flex-direction: column; align-items: flex-start; gap: 1rem; padding: 1.25rem; }
+    .greenscore-banner-sep { display: none; }
+    .greenscore-banner-text { flex: none; width: 100%; }
+  }
 </style>
 </head>
 <body>
@@ -1858,14 +1901,14 @@
 
 <!-- GREEN SCORE -->
 <div style="background: var(--ink);">
-  <div style="max-width: 1200px; margin: 0 auto; padding: 0 4rem 4rem;">
-    <div style="display: flex; align-items: center; gap: 2.5rem; padding: 1.5rem 2rem; border: 1px solid rgba(122,158,126,0.12); background: rgba(61,90,62,0.04);">
-      <div style="flex-shrink: 0; font-family: 'DM Mono', monospace;">
+  <div class="greenscore-banner-wrap">
+    <div class="greenscore-banner-inner">
+      <div class="greenscore-banner-label">
         <div style="font-size: 0.55rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--sage); margin-bottom: 0.3rem;">Open source · Collectif API Thinking</div>
         <div style="font-size: 0.85rem; color: var(--paper); letter-spacing: 0.05em;">API Green Score</div>
       </div>
-      <div style="width: 1px; height: 32px; background: rgba(245,240,232,0.07); flex-shrink: 0;"></div>
-      <p style="font-size: 0.82rem; line-height: 1.6; color: rgba(245,240,232,0.38); flex: 1; margin: 0;">
+      <div class="greenscore-banner-sep"></div>
+      <p class="greenscore-banner-text">
         Co-créateur d'une grille open source d'évaluation de l'impact environnemental des API, une initiative communautaire avec le <a href="https://www.collectif-api-thinking.com/" target="_blank" rel="noopener noreferrer" class="greenscore-link">Collectif API Thinking</a>, qui illustre la cohérence entre expertise technique et engagement pour un numérique responsable.
       </p>
       <a href="https://github.com/API-Green-Score/" target="_blank" rel="noopener noreferrer" class="greenscore-github">GitHub →</a>
