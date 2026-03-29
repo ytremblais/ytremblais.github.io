@@ -880,112 +880,50 @@
   /* ─── GREEN SCORE HIGHLIGHT ─── */
   .greenscore-section {
     border-top: 1px solid rgba(245,240,232,0.08);
-    padding: 7rem 4rem;
-    max-width: 1200px;
-    margin: 0 auto;
   }
 
-  .greenscore-inner {
-    display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: 6rem;
-    align-items: center;
-  }
-
-  .greenscore-badge-block {
-    position: relative;
-  }
-
-  .greenscore-score {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 9rem;
-    font-weight: 300;
-    line-height: 1;
-    color: transparent;
-    -webkit-text-stroke: 1px rgba(122,158,126,0.35);
-    letter-spacing: -0.04em;
-    user-select: none;
-    margin-bottom: -1rem;
-  }
-
-  .greenscore-label {
-    font-family: 'DM Mono', monospace;
-    font-size: 0.65rem;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    color: var(--sage);
-    margin-bottom: 1.5rem;
-  }
-
-  .greenscore-collective {
-    font-family: 'DM Mono', monospace;
-    font-size: 0.6rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--mist);
-    opacity: 0.4;
-    border-top: 1px solid rgba(245,240,232,0.08);
-    padding-top: 1.2rem;
-    margin-top: 1.5rem;
-  }
-
-  .greenscore-right h3 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 2.2rem;
-    font-weight: 300;
-    line-height: 1.2;
-    margin-bottom: 1.5rem;
-    color: var(--paper);
-  }
-
-  .greenscore-right h3 em { color: var(--clay); font-style: italic; }
-
-  .greenscore-right p {
+  .greenscore-intro {
     font-size: 0.95rem;
     line-height: 1.8;
     color: rgba(245,240,232,0.55);
-    margin-bottom: 1.2rem;
+    max-width: 700px;
+    margin-bottom: 3rem;
   }
 
   .greenscore-pillars {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    margin-top: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-top: 0;
   }
 
   .greenscore-pillar {
-    padding: 1rem 1.2rem;
+    padding: 2rem 1.5rem;
     border: 1px solid rgba(122,158,126,0.15);
     background: rgba(61,90,62,0.05);
+    transition: all 0.3s;
+  }
+
+  .greenscore-pillar:hover {
+    background: rgba(122,158,126,0.08);
+    border-color: rgba(122,158,126,0.3);
   }
 
   .greenscore-pillar-name {
     font-family: 'DM Mono', monospace;
-    font-size: 0.6rem;
+    font-size: 0.65rem;
     letter-spacing: 0.15em;
     text-transform: uppercase;
     color: var(--sage);
-    margin-bottom: 0.3rem;
+    margin-bottom: 1rem;
   }
 
   .greenscore-pillar-desc {
-    font-size: 0.8rem;
+    font-size: 0.82rem;
     color: rgba(245,240,232,0.4);
-    line-height: 1.5;
+    line-height: 1.6;
   }
 
-  @media (max-width: 900px) {
-    .greenscore-inner { grid-template-columns: 1fr; gap: 3rem; }
-    .greenscore-section { padding: 5rem 1.5rem; }
-    .greenscore-score { font-size: 6rem; }
-  }
-
-  @media (max-width: 768px) {
-    .greenscore-section { padding: 3.5rem 1.25rem; }
-    .greenscore-score { font-size: 5rem; }
-    .greenscore-pillars { grid-template-columns: 1fr; }
-  }
 
   /* ─── VALEURS ─── */
   .quote-section {
@@ -1135,7 +1073,8 @@
     color: var(--sage);
   }
   .greenscore-github {
-    flex-shrink: 0;
+    display: inline-block;
+    margin-top: 2.5rem;
     font-family: 'DM Mono', monospace;
     font-size: 0.58rem;
     letter-spacing: 0.15em;
@@ -1158,6 +1097,7 @@
     .talks-header { grid-template-columns: 1fr; }
     .expertise-grid { grid-template-columns: 1fr 1fr; }
     .formats-grid { grid-template-columns: 1fr 1fr; }
+    .greenscore-pillars { grid-template-columns: 1fr 1fr; }
     nav { padding: 1.2rem 1.5rem; }
     .nav-links { display: none; }
     section { padding: 5rem 1.5rem; }
@@ -1253,6 +1193,7 @@
     .expertise-card { padding: 1.75rem; min-height: auto; }
 
     .formats-grid { grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .greenscore-pillars { grid-template-columns: 1fr 1fr; gap: 1rem; }
 
     .ref-item { grid-template-columns: 3.5rem 1fr; gap: 1rem; }
 
@@ -1866,37 +1807,28 @@
 <!-- GREEN SCORE -->
 <div id="greenscore" style="background: var(--ink);">
   <section class="greenscore-section reveal">
-    <div class="greenscore-inner">
-      <div class="greenscore-badge-block">
-        <div class="greenscore-label">Open source · Collectif API Thinking</div>
-        <div class="greenscore-score">API</div>
-        <div class="greenscore-collective">Collectif API Thinking · Initiative communautaire</div>
+    <div class="section-label">Numérique responsable · Open source</div>
+    <h2>API Green Score — Évaluer l'impact<br>environnemental de vos <em style="color:var(--clay); font-style:italic;">API</em></h2>
+    <p class="greenscore-intro">Co-créateur avec le <a href="https://www.collectif-api-thinking.com/" target="_blank" rel="noopener noreferrer" class="greenscore-link">Collectif API Thinking</a> d'une grille open source d'évaluation de l'impact environnemental des API — une démarche pionnière à l'intersection de l'architecture technique et du numérique responsable.</p>
+    <div class="greenscore-pillars">
+      <div class="greenscore-pillar">
+        <div class="greenscore-pillar-name">Architecture</div>
+        <div class="greenscore-pillar-desc">Optimisation des structures et protocoles de communication</div>
       </div>
-      <div class="greenscore-right">
-        <h3>Mesurer l'impact<br>environnemental de vos <em>API</em></h3>
-        <p>Co-créateur de l'<strong style="color: var(--paper);">API Green Score</strong> avec le <a href="https://www.collectif-api-thinking.com/" target="_blank" rel="noopener noreferrer" class="greenscore-link">Collectif API Thinking</a> — une grille open source d'évaluation de l'impact environnemental des API, adoptée par des équipes en France et à l'international.</p>
-        <p>Une démarche pionnière à l'intersection de l'architecture technique et du numérique responsable.</p>
-        <div class="greenscore-pillars">
-          <div class="greenscore-pillar">
-            <div class="greenscore-pillar-name">Architecture</div>
-            <div class="greenscore-pillar-desc">Optimisation des structures et protocoles</div>
-          </div>
-          <div class="greenscore-pillar">
-            <div class="greenscore-pillar-name">Design</div>
-            <div class="greenscore-pillar-desc">Conception d'interfaces efficaces</div>
-          </div>
-          <div class="greenscore-pillar">
-            <div class="greenscore-pillar-name">Usage</div>
-            <div class="greenscore-pillar-desc">Cache, pagination, sobriété des appels</div>
-          </div>
-          <div class="greenscore-pillar">
-            <div class="greenscore-pillar-name">Logs</div>
-            <div class="greenscore-pillar-desc">Monitoring et traçabilité</div>
-          </div>
-        </div>
-        <a href="https://github.com/API-Green-Score/" target="_blank" rel="noopener noreferrer" class="greenscore-github" style="display: inline-block; margin-top: 2rem;">GitHub →</a>
+      <div class="greenscore-pillar">
+        <div class="greenscore-pillar-name">Design</div>
+        <div class="greenscore-pillar-desc">Conception d'interfaces efficaces et minimalistes</div>
+      </div>
+      <div class="greenscore-pillar">
+        <div class="greenscore-pillar-name">Usage</div>
+        <div class="greenscore-pillar-desc">Cache, pagination et sobriété des appels</div>
+      </div>
+      <div class="greenscore-pillar">
+        <div class="greenscore-pillar-name">Logs</div>
+        <div class="greenscore-pillar-desc">Monitoring et traçabilité pour identifier les inefficacités</div>
       </div>
     </div>
+    <a href="https://github.com/API-Green-Score/" target="_blank" rel="noopener noreferrer" class="greenscore-github">GitHub →</a>
   </section>
 </div>
 
