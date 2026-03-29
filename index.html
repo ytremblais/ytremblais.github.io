@@ -981,6 +981,12 @@
     .greenscore-score { font-size: 6rem; }
   }
 
+  @media (max-width: 768px) {
+    .greenscore-section { padding: 3.5rem 1.25rem; }
+    .greenscore-score { font-size: 5rem; }
+    .greenscore-pillars { grid-template-columns: 1fr; }
+  }
+
   /* ─── VALEURS ─── */
   .quote-section {
     border-top: 1px solid rgba(245,240,232,0.08);
@@ -1260,48 +1266,6 @@
     .cursor, .cursor-ring { display: none; }
   }
 
-  /* ─── GREENSCORE BANNER ─── */
-  .greenscore-banner-wrap {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 4rem 4rem;
-  }
-  .greenscore-banner-inner {
-    display: flex;
-    align-items: center;
-    gap: 2.5rem;
-    padding: 1.5rem 2rem;
-    border: 1px solid rgba(122,158,126,0.12);
-    background: rgba(61,90,62,0.04);
-  }
-  .greenscore-banner-label {
-    flex-shrink: 0;
-    font-family: 'DM Mono', monospace;
-  }
-  .greenscore-banner-sep {
-    width: 1px;
-    height: 32px;
-    background: rgba(245,240,232,0.07);
-    flex-shrink: 0;
-  }
-  .greenscore-banner-text {
-    font-size: 0.82rem;
-    line-height: 1.6;
-    color: rgba(245,240,232,0.38);
-    flex: 1;
-    margin: 0;
-  }
-
-  @media (max-width: 900px) {
-    .greenscore-banner-wrap { padding: 0 1.5rem 3rem; }
-  }
-
-  @media (max-width: 768px) {
-    .greenscore-banner-wrap { padding: 0 1.25rem 2.5rem; }
-    .greenscore-banner-inner { flex-direction: column; align-items: flex-start; gap: 1rem; padding: 1.25rem; }
-    .greenscore-banner-sep { display: none; }
-    .greenscore-banner-text { flex: none; width: 100%; }
-  }
 </style>
 </head>
 <body>
@@ -1900,20 +1864,40 @@
 </div>
 
 <!-- GREEN SCORE -->
-<div style="background: var(--ink);">
-  <div class="greenscore-banner-wrap">
-    <div class="greenscore-banner-inner">
-      <div class="greenscore-banner-label">
-        <div style="font-size: 0.55rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--sage); margin-bottom: 0.3rem;">Open source · Collectif API Thinking</div>
-        <div style="font-size: 0.85rem; color: var(--paper); letter-spacing: 0.05em;">API Green Score</div>
+<div id="greenscore" style="background: var(--ink);">
+  <section class="greenscore-section reveal">
+    <div class="greenscore-inner">
+      <div class="greenscore-badge-block">
+        <div class="greenscore-label">Open source · Collectif API Thinking</div>
+        <div class="greenscore-score">API</div>
+        <div class="greenscore-collective">Collectif API Thinking · Initiative communautaire</div>
       </div>
-      <div class="greenscore-banner-sep"></div>
-      <p class="greenscore-banner-text">
-        Co-créateur d'une grille open source d'évaluation de l'impact environnemental des API, une initiative communautaire avec le <a href="https://www.collectif-api-thinking.com/" target="_blank" rel="noopener noreferrer" class="greenscore-link">Collectif API Thinking</a>, qui illustre la cohérence entre expertise technique et engagement pour un numérique responsable.
-      </p>
-      <a href="https://github.com/API-Green-Score/" target="_blank" rel="noopener noreferrer" class="greenscore-github">GitHub →</a>
+      <div class="greenscore-right">
+        <h3>Mesurer l'impact<br>environnemental de vos <em>API</em></h3>
+        <p>Co-créateur de l'<strong style="color: var(--paper);">API Green Score</strong> avec le <a href="https://www.collectif-api-thinking.com/" target="_blank" rel="noopener noreferrer" class="greenscore-link">Collectif API Thinking</a> — une grille open source d'évaluation de l'impact environnemental des API, adoptée par des équipes en France et à l'international.</p>
+        <p>Une démarche pionnière à l'intersection de l'architecture technique et du numérique responsable.</p>
+        <div class="greenscore-pillars">
+          <div class="greenscore-pillar">
+            <div class="greenscore-pillar-name">Architecture</div>
+            <div class="greenscore-pillar-desc">Optimisation des structures et protocoles</div>
+          </div>
+          <div class="greenscore-pillar">
+            <div class="greenscore-pillar-name">Design</div>
+            <div class="greenscore-pillar-desc">Conception d'interfaces efficaces</div>
+          </div>
+          <div class="greenscore-pillar">
+            <div class="greenscore-pillar-name">Usage</div>
+            <div class="greenscore-pillar-desc">Cache, pagination, sobriété des appels</div>
+          </div>
+          <div class="greenscore-pillar">
+            <div class="greenscore-pillar-name">Logs</div>
+            <div class="greenscore-pillar-desc">Monitoring et traçabilité</div>
+          </div>
+        </div>
+        <a href="https://github.com/API-Green-Score/" target="_blank" rel="noopener noreferrer" class="greenscore-github" style="display: inline-block; margin-top: 2rem;">GitHub →</a>
+      </div>
     </div>
-  </div>
+  </section>
 </div>
 
 <!-- QUOTE -->
